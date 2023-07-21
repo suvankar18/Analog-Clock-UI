@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(30deg, yellow 50%, black 50%);
+}
+
+/* Clock section */
+.clock {
+  display: flex;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzJLiZKNojfsN_Yy9hGaxF5BTO3ccNRxzEEFXJENdAhHF0icML2s5eBR0v0rf6YqBYZQ&usqp=CAU");
+  background-size: cover;
+  border: 4px rgb(161, 114, 11) solid;
+  border-radius: 50%;
+  box-shadow: -4px -4px 8px rgb(14, 13, 13), 4px 4px 8px rgb(163, 157, 157);
+}
+
+.clock:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgb(19, 18, 18);
+  border-radius: 50%;
+  z-index: 999;
+}
+.brand_name {
+  text-align: center;
+  margin-bottom: 150px;
+  font-size: x-large;
+  color: black;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+/* Hours Section */
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+/* Minutes Section */
+.clock .min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+/* Seconds Section */
+.clock .sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 100px;
+  background: #161616;
+  z-index: 9;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 110px;
+  background: #111111;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 170px;
+  background: #131212;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
